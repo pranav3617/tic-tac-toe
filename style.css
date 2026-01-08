@@ -1,0 +1,107 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page background */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game container */
+.game {
+    background: #ffffff;
+    padding: 25px 35px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* Heading */
+.game h1 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 32px;
+}
+
+/* Status text */
+#status {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(3, 110px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+/* Cells */
+.cell {
+    background: linear-gradient(145deg, #f0f0f0, #dcdcdc);
+    border-radius: 15px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15),
+                -5px -5px 10px rgba(255,255,255,0.8);
+}
+
+/* Hover effect */
+.cell:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #e8e8e8, #cfcfcf);
+}
+
+/* X and O colors */
+.cell:contains("X") {
+    color: #e63946;
+}
+
+.cell:contains("O") {
+    color: #1d3557;
+}
+
+/* Restart button */
+button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    box-shadow: 0 8px 20px rgba(255, 75, 43, 0.4);
+    transition: all 0.2s ease;
+}
+
+/* Button hover */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(255, 75, 43, 0.6);
+}
+
+/* Button click */
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 15px rgba(255, 75, 43, 0.4);
+}
