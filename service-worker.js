@@ -1,13 +1,14 @@
 const CACHE_NAME = "tic-tac-toe-cache-v1";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/style.css",
-  "/script.js",
-  "/icon-192.png",
-  "/icon-512.png",
-  "/manifest.json"
+  "./",
+  "./index.html",
+  "./style.css",
+  "./script.js",
+  "./icon-192.png",
+  "./icon-512.png",
+  "./manifest.json"
 ];
+
 
 // Install event: cache files
 self.addEventListener("install", (event) => {
@@ -27,3 +28,4 @@ self.addEventListener("fetch", (event) => {
   );
 
 });  
+
