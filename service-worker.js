@@ -4,6 +4,8 @@ const urlsToCache = [
   "/index.html",
   "/style.css",
   "/script.js",
+  "/icon-192.png",
+  "/icon-512.png",
   "/manifest.json"
 ];
 
@@ -23,4 +25,5 @@ self.addEventListener("fetch", (event) => {
       return response || fetch(event.request);
     })
   );
+
 });  
